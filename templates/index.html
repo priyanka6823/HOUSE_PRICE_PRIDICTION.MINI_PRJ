@@ -1,0 +1,127 @@
+
+        <!DOCTYPE html>
+< lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f3f3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            background: cadetblue;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .left {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .left img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .left h2 {
+            margin: 0;
+        }
+
+        .left p {
+            color: gray;
+            font-size: 16px;
+            margin-top: 5px;
+        }
+
+        .center {
+            flex: 2;
+            padding: 20px;
+        }
+
+        .center input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        .center button {
+            padding: 12px 20px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .center button:hover {
+            background: #0056b3;
+        }
+
+        .prediction {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 20px;
+            color: green;
+        }
+    </style>
+</head>
+
+<bod>
+    <div class="container">
+
+        <!-- Left Section -->
+        <div class="left">
+            <img src="{{ url_for('static', filename='photo.jpeg') }}" alt=" photo">
+            <h2> project by Kottamula Priyanka</h2>
+            <p>Data Analyst</p>
+        </div>
+        <div class="center">
+            <form action="/predict" method="post">
+                <input type="number" step="any" name="bedrooms" placeholder="bedrooms	" required>
+                <input type="number" step="any" name="bathrooms"placeholder="bathrooms" required>
+                <input type="number" step="any" name="sqft_living" placeholder="sqft_living" required>
+                <input type="number" step="any" name="sqft_lot"placeholder="sqft_lot" required>
+                <input type="number" step="any" name="floors"placeholder="floors" required>
+                <input type="number" step="any" name="waterfront" placeholder="waterfront" required>
+                <input type="number" step="any" name="view" placeholder="view" required>
+                <input type="number" step="any" name="condition" placeholder="condition" required>
+                <input type="number" step="any" name="sqft_above" placeholder="sqft_above" required>
+                <input type="number" step="any" name="sqft_basement" placeholder="sqft_basement" required>
+                <input type="number" step="any" name="yr_built" placeholder="yr_built	" required>
+                <input type="number" step="any" name="yr_renovated" placeholder="yr_renovated" required>
+                <input type="number" step="any" name="country" placeholder="country	" required>
+                <input type="number" step="any" name="year" placeholder="year	" required>
+                <input type="number" step="any" name="month" placeholder="month" required>
+                <input type="number" step="any" name="day" placeholder="day" required>
+                <button type="submit">Predict Price</button>
+            </form>
+            <div class="prediction">
+                {% if prediction_text %}
+                    {{ prediction_text }}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
