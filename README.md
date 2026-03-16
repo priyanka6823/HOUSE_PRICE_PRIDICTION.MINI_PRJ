@@ -8,7 +8,7 @@ House Price Prediction is a Machine Learning project that predicts the price of 
 The project demonstrates how machine learning techniques can assist buyers, sellers, and real estate professionals in making data-driven decisions about property values. 
 
 
-#Objectives
+Objectives
 Understand basic concepts of Machine Learning
 
 Implement the Linear Regression algorithm
