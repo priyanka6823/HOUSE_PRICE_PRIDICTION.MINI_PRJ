@@ -9,6 +9,7 @@ The project demonstrates how machine learning techniques can assist buyers, sell
 
 
 ##Objectives
+
 Understand basic concepts of Machine Learning
 
 Implement the Linear Regression algorithm
