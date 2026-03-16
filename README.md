@@ -154,7 +154,9 @@ This project demonstrates how machine learning techniques can be applied to pred
 
 ##  Contact
 kottamula priyanka
+
 email:priyankakottamula@gmail.com
+
 phno:6303145006
 
 
